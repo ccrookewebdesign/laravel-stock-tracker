@@ -1,7 +1,7 @@
 <header class="bg-gray-700 text-white p-4" x-data="{ open: false }">
     <div class="flex justify-between items-center">
         <h1 class="font-bold tracking-widest uppercase">
-            Laravel Scaffold
+            Laravel ScaffoldX
         </h1>
 
         {{-- Desktop Nav Menu --}}

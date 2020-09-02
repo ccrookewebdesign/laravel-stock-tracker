@@ -1,7 +1,7 @@
 <?php
 
-use App\Comment;
-use App\Rules\Recaptcha;
+// use App\Comment;
+// use App\Rules\Recaptcha;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     /*$comment = App\Comment::create(['body' => 'Testing']);
     dd($comment);*/
+
     return view('welcome');
 })->name('home');
 
