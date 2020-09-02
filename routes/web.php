@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     /*$comment = App\Comment::create(['body' => 'Testing']);
     dd($comment);*/
-
     return view('welcome');
 })->name('home');
 
@@ -36,35 +35,3 @@ Route::get('/contact', function () {
 Route::get('/series', function () {
     return view('components.series');
 })->name('series');
-
-Route::get('/comments/{comment}/edit', function(Comment $comment){
-    return view('comments.edit', compact('comment'));
-});
-
-Route::patch('/comments/{comment}', function(Comment $comment){
-    $comment->update(
-        request()->validate(['body' => 'required|string'])
-    );
-
-    return redirect("/comments/{$comment->id}/edit");
-});
-
-Route::delete('/comments/{comment}', function(Comment $comment){
-    $comment->delete();
-
-    return redirect("/");
-});
-
-Route::get('/posts/create', function () {
-    return view('posts.create');
-})->name('posts-create');
-
-Route::post('/posts/', function () {
-    request()->validate([
-       'title' => 'required',
-       'body' => 'required',
-       'g-recaptcha-response' => ['required', new Recaptcha],
-    ]);
-
-    dd('validation passed');
-})->name('posts-save');
