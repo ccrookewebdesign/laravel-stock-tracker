@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//use App\Comment;
 Route::get('/', function () {
     /*$comment = App\Comment::create(['body' => 'Testing']);
     dd($comment);*/
@@ -23,23 +22,14 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about', function () {
-    /*$comment = App\Comment::create(['body' => 'Testing']);
-    dd($comment);*/
-
     return view('welcome');
 })->name('about');
 
 Route::get('/testimonials', function () {
-    /*$comment = App\Comment::create(['body' => 'Testing']);
-    dd($comment);*/
-
     return view('welcome');
 })->name('testimonials');
 
 Route::get('/contact', function () {
-    /*$comment = App\Comment::create(['body' => 'Testing']);
-    dd($comment);*/
-
     return view('welcome');
 })->name('contact');
 
@@ -48,7 +38,6 @@ Route::get('/series', function () {
 })->name('series');
 
 Route::get('/comments/{comment}/edit', function(Comment $comment){
-    // return view('comments.edit', ['comment' => $comment]);
     return view('comments.edit', compact('comment'));
 });
 
@@ -71,7 +60,6 @@ Route::get('/posts/create', function () {
 })->name('posts-create');
 
 Route::post('/posts/', function () {
-    //return view('posts.create');
     request()->validate([
        'title' => 'required',
        'body' => 'required',
