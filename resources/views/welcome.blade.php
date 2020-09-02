@@ -1,100 +1,50 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<x-layout>
+    <x-section>
+        <x-tabs active="Second">
+            <x-tab name="First">
+                First tab content here
+            </x-tab>
+            <x-tab name="Second">
+                Second tab content here
+            </x-tab>
+            <x-tab name="Third">
+                Third tab content here
+            </x-tab>
+        </x-tabs>
+    </x-section>
+    {{--<x-section>
+        <x-dropdown>
+            <x-slot name="trigger">
+                <button>Click Me</button>
+            </x-slot>
+            <x-dropdown-link href="/">One</x-dropdown-link>
+            <x-dropdown-link href="/two">Two</x-dropdown-link>
+            <x-dropdown-link href="/3">Three</x-dropdown-link>
+        </x-dropdown>
 
-        <title>Laravel</title>
+        <p>
+            boom daddy was here
+        </p>
+    </x-section>--}}
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    {{--<x-section>Boom Daddy was here!</x-section>--}}
+    {{--<x-flash type="warning">Boom Daddy was here!</x-flash>--}}
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    {{--<x-flash class="border-t">A very fine day in my mind!</x-flash>--}}
 
-            .full-height {
-                height: 100vh;
-            }
+    {{--<x-modal title="Deactivate Your Account, Bitch?" submit-label="Deactivate">
+        <x-slot name="trigger">
+            <button @click="on = true">Show Modal</button>
+        </x-slot>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+        You really wanna do this?
+    </x-modal>--}}
 
-            .position-ref {
-                position: relative;
-            }
+    {{--<x-modal title="Subscribe, Bitch?" submit-label="Subscribe or Die">
+        <x-slot name="trigger">
+            <button @click="on = true">Show Modal</button>
+        </x-slot>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Boom
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+        You <span class="font-bold font-italic">know</span> you wanna do this...
+    </x-modal>--}}
+</x-layout>

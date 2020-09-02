@@ -2,12 +2,22 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Collection;
 
-class User extends Authenticatable
-{
+/**
+ * Class User
+ * @package App
+ *
+ * @property int id
+ * @property string name - alias of full_name
+ * @property string email
+ */
+class User extends Authenticatable {
+
     use Notifiable;
 
     /**
