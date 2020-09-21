@@ -38,3 +38,15 @@ services:
 # create persistent volume for the MySQL data storage
 volumes:
   dbdata:
+    driver: "local"
+
+  redis_data:
+    driver: "local"
+
+  mysql_data:
+    driver: "local"
+
+
+
+
+

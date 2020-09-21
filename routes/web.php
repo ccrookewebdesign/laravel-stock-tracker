@@ -1,7 +1,6 @@
 <?php
 
-// use App\Comment;
-// use App\Rules\Recaptcha;
+use App\Comment;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/', function () {
-    /*$comment = App\Comment::create(['body' => 'Testing']);
-    dd($comment);*/
+    //$comment = Comment::create(['body' => 'Chris was  here']);
+    // $comment->boomDaddy();
+    /*$url = 'https://api.bestbuy.com/v1/products/6364253.json?apiKey=7FUP2jgeI6QPeH2e1HNBFvrH';
+    $product = \Illuminate\Support\Facades\Http::get($url)->json();
+    $product['salePrice'];*/
 
     return view('welcome');
 })->name('home');

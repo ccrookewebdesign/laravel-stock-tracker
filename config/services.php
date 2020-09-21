@@ -33,6 +33,12 @@ return [
     'recaptcha' => [
         'key' => env('RECAPTCHA_KEY'),
         'secret' => env('RECAPTCHA_SECRET'),
-    ]
+    ],
+
+    'clients' => [
+        'bestBuy' => [
+            'key' => env('BEST_BUY_KEY'),
+        ],
+    ],
 
 ];
